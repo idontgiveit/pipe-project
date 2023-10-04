@@ -14,6 +14,6 @@ public class Controller {
 
     @GetMapping(path = "/start", produces = "application/json")
     public String start() {
-        return "{ \"state\" : \"started\"}";
+        return "{ \"state\"  : \"started\"}";
     }
 }
