@@ -45,7 +45,7 @@ jobs:
     - name: push
       run: git push --tags
     - name: release
-      run: gh release create ${{ inputs.version }}"      
+      run: gh release create ${{ inputs.version }}      
     - name: show version  
       run: echo "new release verion ${{ inputs.version }} is created"
 
