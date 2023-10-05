@@ -33,12 +33,12 @@ jobs:
       run: git status
     - name: git checkout
       run: git checkout main
-    - name: tag
-      run: git tag -a  ${{ inputs.version }} -m "new version  ${{ inputs.version }}"
     - name: email set
       run: git config --global user.email ${{ secrets.GIT_EMAIL }}  
     - name: email
       run: git config --global user.name ${{ secrets.GIT_USER }}         
+    - name: tag
+      run: git tag -a  ${{ inputs.version }} -m "new version  ${{ inputs.version }}"      
     - name: push
       run: git push    
     - name: show version  
