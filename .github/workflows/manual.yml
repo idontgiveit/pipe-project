@@ -32,7 +32,7 @@ jobs:
     - name: Git status
       run: git status
     - name: git checkout
-      run: git checkout master
+      run: git checkout main
     - name: tag
       run: git tag -a  ${{ inputs.version }} -m "new version  ${{ inputs.version }}"
     - name: push
