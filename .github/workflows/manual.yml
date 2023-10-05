@@ -43,7 +43,9 @@ jobs:
     - name: tag
       run: git tag -a  ${{ inputs.version }} -m "new version  ${{ inputs.version }}"      
     - name: push
-      run: git push --tags   
+      run: git push --tags
+    - name: release
+      run: gh release create ${{ inputs.version }}"      
     - name: show version  
-      run: echo "verion is ${{ inputs.version }}"
+      run: echo "new release verion ${{ inputs.version }} is created"
 
