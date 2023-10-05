@@ -31,4 +31,6 @@ jobs:
       run: pwd
     - name: Git status
       run: git status
+    - name: show version  
+      run: echo "verion is ${{ inputs.version }}"
 
