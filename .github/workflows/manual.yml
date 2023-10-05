@@ -31,6 +31,12 @@ jobs:
       run: pwd
     - name: Git status
       run: git status
+    - name: git checkout
+      run: git checkout master
+    - name: tag
+      run: git tag -a  ${{ inputs.version }} -m "new version  ${{ inputs.version }}"
+    - name: push
+      run: git push    
     - name: show version  
       run: echo "verion is ${{ inputs.version }}"
 
