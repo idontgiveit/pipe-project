@@ -10,7 +10,7 @@ public class BusinessServiceTest {
     public void testAdd() {
         BusinessService service = new BusinessService();
         service.add(1L);
-        Assertions.assertEquals(1, service.list().size());
+        Assertions.assertEquals(2, service.list().size());
     }
 
 }
