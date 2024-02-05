@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import ru.otus.service.BusinessService;
 
+import java.util.List;
+import java.util.Set;
+
 @RestController
 public class Controller {
 
@@ -20,8 +23,8 @@ public class Controller {
     }
 
     @GetMapping(path = "/add/{number}")
-    public HttpStatus add (@PathVariable long number) {
+    public Set<Long> add (@PathVariable long number) {
         businessService.add(number);
-        return HttpStatus.OK;
+        return businessService.list();
     }
 }
