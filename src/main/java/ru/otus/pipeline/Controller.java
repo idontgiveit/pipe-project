@@ -23,8 +23,14 @@ public class Controller {
     }
 
     @GetMapping(path = "/add/{number}")
-    public Set<Long> add (@PathVariable long number) {
+    public Set<Long> add(@PathVariable long number) {
         businessService.add(number);
+        return businessService.list();
+    }
+
+    @GetMapping(path = "/delete/{number}")
+    public Set<Long> delete(@PathVariable long number) {
+        businessService.remove(number);
         return businessService.list();
     }
 }
