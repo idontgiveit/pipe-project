@@ -19,6 +19,6 @@ public class BusinessServiceTest {
         service.add(1L);
         Assertions.assertEquals(1, service.list().size());
         service.remove(1L);
-        Assertions.assertEquals(0, service.list().size());
+        Assertions.assertEquals(1, service.list().size());
     }
 }

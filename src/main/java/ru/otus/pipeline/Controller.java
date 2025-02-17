@@ -33,4 +33,9 @@ public class Controller {
         businessService.remove(number);
         return businessService.list();
     }
+
+    @GetMapping(path = "/list")
+    public Set<Long> list() {
+        return businessService.list();
+    }
 }
