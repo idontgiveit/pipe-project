@@ -35,6 +35,8 @@ jobs:
     # Runs a single command using the runners shell
     - name: show root
       run: pwd
+    - name: show env
+      run: printenv
     - name: Git status
       run: git status
     - name: git checkout
